@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lecture_status">
+
+    <TextView
+        android:id="@+id/lectureid"
+        android:layout_width="176dp"
+        android:layout_height="37dp"
+        android:text="LectureId"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168" />
+
+    <TextView
+        android:id="@+id/lecturestatus"
+        android:layout_width="176dp"
+        android:layout_height="37dp"
+        android:text="LectureStatus"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toEndOf="@+id/lectureid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Couse Code"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/lectureid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/lecturestatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <Button
+        android:id="@+id/assignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assignment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lectureid"
+        app:layout_constraintVertical_bias="0.943" />
+
+    <Button
+        android:id="@+id/notificaiton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificaitons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintStart_toEndOf="@+id/assignment"
+        app:layout_constraintTop_toBottomOf="@+id/lecturestatus"
+        app:layout_constraintVertical_bias="0.943" />
+
+    <Spinner
+        android:id="@+id/sassign"
+        android:layout_width="198dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/assignment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lectureid"
+        app:layout_constraintVertical_bias="0.496" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/notificaiton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sassign"
+        app:layout_constraintTop_toBottomOf="@+id/lecturestatus">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Running" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delayed" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelled" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/updateStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintBottom_toTopOf="@+id/notificaiton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.467" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
